@@ -18,15 +18,27 @@
 // 5 - undefined 
 // 6 - symbol
 // doi tuong : object
-
+// * Truong hop : Primities
 // null : khi nao gap null
 // var a = null
 // console.log(a)
 // undefined : Khi nao gap
-// Tao ra bien bang tu khoa var , let ma khong gan gia tri
-var a
-console.log(a);
+// (TH1) Tao ra bien bang tu khoa var , let ma khong gan gia tri
+// var a
+// console.log(a);
 
+// 3 : Object
+// * Truong hop : Object
+// const teo = {
+//     name : "Nguyen Van Teo",
+//     age : 10
+// }
+// console.log(teo)
+
+// 4 : Array
+const arrayNames = ["Teo","Ti","Tun","Hoa","Tuan"]
+arrayNames[0] = "Phat"
+console.log(arrayNames[0])
 
 
 
