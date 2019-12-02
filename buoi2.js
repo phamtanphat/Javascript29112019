@@ -26,6 +26,12 @@
 // (TH1) Tao ra bien bang tu khoa var , let ma khong gan gia tri
 // var a
 // console.log(a);
+// (Th2 ) Goi toi thuoc tinh khong ton tai trong object
+// const teo = {
+//     name : "Nguyen Van Teo",
+//     age : 10
+// }
+// console.log(teo.address)
 
 // 3 : Object
 // * Truong hop : Object
@@ -33,13 +39,19 @@
 //     name : "Nguyen Van Teo",
 //     age : 10
 // }
-// console.log(teo)
+// console.log(teo['name'])
+// console.log(teo.address.b)
+
 
 // 4 : Array
-const arrayNames = ["Teo","Ti","Tun","Hoa","Tuan"]
-arrayNames[0] = "Phat"
-console.log(arrayNames[0])
+// const arrayNames = ["Teo","Ti","Tun","Hoa","Tuan"]
+// arrayNames[0] = "Phat"
+// console.log(arrayNames[0])
 
+// 5: Toan tu => a + b 
+// Toan tu mot ngoi : a + b + c , a - b ,a * b
+// Toan tu hai ngoi : a++ , ++a , a-- , --a
+// Toan tu 3 ngoi : dieukien ?  true : false
 
 
 
