@@ -6,7 +6,3 @@
 // Dua tep luu tru vao trong git : git commit -m "ten commit"
 // Xem lich su commit : git log
 // Down load reposi : git clone https://github.com/phamtanphat/Javascript29112019.git
-
-// Working directory
-// Staging area
-// Local Repository
