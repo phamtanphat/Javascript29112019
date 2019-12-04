@@ -53,6 +53,9 @@
 // Toan tu hai ngoi : a++ , ++a , a-- , --a
 // Toan tu 3 ngoi : dieukien ?  true : false
 
+var a = 5;
+var b = 10;
+console.log(++a)
 
 
 
