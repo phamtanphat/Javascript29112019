@@ -33,6 +33,15 @@
 // }
 // console.log(teo.address)
 
+// (Th3) phuong thuc khong return hoac return ;
+// hoac return ve doi tuong khong ton tai
+// function showName (name){
+//     console.log(name)
+//     return;
+// }
+// console.log(showName("Pham Tan Phat"))
+
+
 // 3 : Object
 // * Truong hop : Object
 // const teo = {
@@ -53,9 +62,9 @@
 // Toan tu hai ngoi : a++ , ++a , a-- , --a
 // Toan tu 3 ngoi : dieukien ?  true : false
 
-var a = 5;
-var b = 10;
-console.log(++a)
+// var a = 5;
+// var b = 10;
+// console.log(++a)
 
 
 
