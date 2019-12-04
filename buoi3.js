@@ -83,14 +83,24 @@
 //     console.log("B lon hon A")
 // }
 
-//Kieu object
-const teo = {name : 5}
-const ti = {name : 5}
+//Kieu object : khong su dung so sanh cho object
+// No se so sanh vung nho voi nhau
+// const teo = {name : 5}
+// const ti = {name : 5}
 
-if(teo === ti){
-    console.log(" Teo lon hon ti")
-}else{
-    console.log("Teo be hon ti")
+// if(teo === ti){
+//     console.log(" Teo lon hon ti")
+// }else{
+//     console.log("Teo be hon ti")
+// }
+
+// 11 : Vong lap
+var arrayNames = ['Teo','Ti','Tun','Hoa','Tuan']
+for (var i = 0 ; i < arrayNames.length ;i++){
+    if(arrayNames[i] === 'Teo' ){
+       continue
+    }
+    console.log(arrayNames[i])
 }
 
 
