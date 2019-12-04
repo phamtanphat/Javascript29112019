@@ -56,8 +56,8 @@
 // // goi y code : ctrl + space
 // console.log(rectangle.getArea())
 // 10 : Cac phep tinh so sanh
-var a = 5;
-var b = 6;
+// var a = 5;
+// var b = 6;
 //  6 gia la false : 0 , null , false 
 //  undefined , NaN , ''
 // if(NaN){
@@ -69,7 +69,29 @@ var b = 6;
 // tri ben trai va in ra gia tri ben phai
 // gia null la 0 (VD : a + null => 5 + 0 = 5)
 // mot gia tri cong cho chuoi => chuoi (VD : a + '6' => 56)
-console.log(a + '6')
+// console.log(a + '6')
+
+// so sanh su dung == thi so sanh ve gia tri
+// so sanh su dung === thi so sanh ve gia tri va kieu du lieu
+
+// Kieu nguyen thuy
+// var a = '1999'
+// var b = '2'
+// if(a > b){
+//     console.log("A lon hon B")
+// }else{
+//     console.log("B lon hon A")
+// }
+
+//Kieu object
+const teo = {name : 5}
+const ti = {name : 5}
+
+if(teo === ti){
+    console.log(" Teo lon hon ti")
+}else{
+    console.log("Teo be hon ti")
+}
 
 
 
