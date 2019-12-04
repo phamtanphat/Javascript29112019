@@ -11,14 +11,31 @@
 /**
  * Tính thể tích khối hộp
  * https://www.wikihow.com/Calculate-Volume-of-a-Box
- * @param {Number} w Chiều rộng
- * @param {Number} h Chiều cao
- * @param {Number} l Chiều dài
- * @returns {Number} Diện tích
- */
-function getBoxVolume(w, h, l) {
-  // Viết code ở đây
-  return w * h * l
+//  * @param {Number} w Chiều rộng
+//  * @param {Number} h Chiều cao
+//  * @param {Number} l Chiều dài
+//  * @returns {Number} Diện tích
+//  */
+// function getBoxVolume(w, h, l) {
+//   // Viết code ở đây
+//   return w * h * l
+// }
+// console.log(getBoxVolume(10, 20, 30)); // 6000
+// console.log(getBoxVolume(4, 5, 6)); // 120
+// 9 : Object method
+const teo = {
+    name : 'Nguyen Van Teo',
+    age : 5,
+    speakLanguage : function(){
+        console.log(this.name)
+    } 
 }
-console.log(getBoxVolume(10, 20, 30)); // 6000
-console.log(getBoxVolume(4, 5, 6)); // 120
+tun.speakLanguage()
+
+
+
+
+
+
+
+
