@@ -23,14 +23,37 @@
 // console.log(getBoxVolume(10, 20, 30)); // 6000
 // console.log(getBoxVolume(4, 5, 6)); // 120
 // 9 : Object method
-const teo = {
-    name : 'Nguyen Van Teo',
-    age : 5,
-    speakLanguage : function(){
-        console.log(this.name)
-    } 
+// const teo = {
+//     name : 'Nguyen Van Teo',
+//     age : 5,
+//     speakLanguage : function(){
+//         console.log(this.name)
+//     } 
+// }
+// teo.speakLanguage()
+/**
+ * Khai báo biến `rectangle` là 1 object gồm có các property:
+ * - width: chiều rộng, là 1 số bất kì
+ * - height: chiều cao, là 1 số bất kì
+ * Viết các method:
+ * - getWidth: trả về chiều rộng
+ * - getHeight: trả về chiều cao
+ * - getArea: trả về diện tích
+ */
+const rectangle = {
+    width : 10,
+    height : 15,
+    getWidth: function (){
+        return this.width
+    },
+    getHeight: function() {
+        return this.height
+    },
+    getArea : function(){
+        return this.width * this.height
+    }
 }
-tun.speakLanguage()
+console.log(rectangle.getArea())
 
 
 
