@@ -40,20 +40,36 @@
  * - getHeight: trả về chiều cao
  * - getArea: trả về diện tích
  */
-const rectangle = {
-    width : 10,
-    height : 15,
-    getWidth: function (){
-        return this.width
-    },
-    getHeight: function() {
-        return this.height
-    },
-    getArea : function(){
-        return this.width * this.height
-    }
-}
-console.log(rectangle.getArea())
+// const rectangle = {
+//     width : 10,
+//     height : 15,
+//     getWidth: function (){
+//         return this.width
+//     },
+//     getHeight: function() {
+//         return this.height
+//     },
+//     getArea : function(){
+//         return this.width * this.height
+//     }
+// }
+// // goi y code : ctrl + space
+// console.log(rectangle.getArea())
+// 10 : Cac phep tinh so sanh
+var a = 5;
+var b = 6;
+//  6 gia la false : 0 , null , false 
+//  undefined , NaN , ''
+// if(NaN){
+//     console.log("Nhay vao if")
+// }else{
+//     console.log("Nhay vao else")
+// }
+// console.log((a,b)) => bieu thuc dau phay tinh gia
+// tri ben trai va in ra gia tri ben phai
+// gia null la 0 (VD : a + null => 5 + 0 = 5)
+// mot gia tri cong cho chuoi => chuoi (VD : a + '6' => 56)
+console.log(a + '6')
 
 
 
