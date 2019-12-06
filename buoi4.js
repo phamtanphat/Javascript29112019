@@ -30,17 +30,35 @@
 //     console.log(fun)
 // }
 // showLog(tinhtong(5 ,10))
-var giangvien = {
-    name : "Pham tan phat",
-    thoigianday : function(dosth){
-        console.log("Thoi gian ket thuc : 9h30")
-        dosth()
-    }
+// var giangvien = {
+//     name : "Pham tan phat",
+//     thoigianday : function(dosth){
+//         console.log("Thoi gian ket thuc : 9h30")
+//         dosth()
+//     }
+// }
+// function diVenha(){
+//     console.log("Di ve nha")
+// }
+// giangvien.thoigianday(diVenha)
+
+/**
+ * 1. Viết hàm double nhận vào 1 số bất kì,
+ *  hiển thị ra số đó nhân đôi
+ * 2. Viết hàm sumAndDo nhận vào 1 array và 1 callback function. 
+ * Hàm sumAndDo làm nhiệm vụ tính tổng array đó, 
+ * sau đó gọi callback function với tham số là kết quả tổng vừa tính
+ */
+function double(num) {
+    
 }
-function diVenha(){
-    console.log("Di ve nha")
+
+function sumAndDo(nums, callback) {
+
 }
-giangvien.thoigianday(diVenha)
+
+sumAndDo([1, 2, 3], double);
+
 
 
 
