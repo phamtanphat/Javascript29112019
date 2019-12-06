@@ -17,8 +17,32 @@
 // Xoa phan tu o vi tri dau tien
 // numbers.shift()
 // Xoa phan tu giua mang
-const numbers = [1,2,3,4,5]
+// const numbers = [1,2,3,4,5]
 // numbers.splice(2,2)
 // Them phan tu giua mang
-numbers.splice(2,0,7,8,9,10)
-console.log(numbers)
+// numbers.splice(2,0,7,8,9,10)
+// console.log(numbers)
+// 14 – Callback tham số
+// function tinhtong(a , b){
+//     return a + b
+// }
+// function showLog(fun){
+//     console.log(fun)
+// }
+// showLog(tinhtong(5 ,10))
+var giangvien = {
+    name : "Pham tan phat",
+    thoigianday : function(dosth){
+        console.log("Thoi gian ket thuc : 9h30")
+        dosth()
+    }
+}
+function diVenha(){
+    console.log("Di ve nha")
+}
+giangvien.thoigianday(diVenha)
+
+
+
+
+
