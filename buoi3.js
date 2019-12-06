@@ -149,8 +149,13 @@ var apartment = {
   };
   
   function getkey(object){
+      for(var key in object){
+          console.log(key)
+          if(typeof object[key] === 'object'){
+            getkey(object[key])
+          }
+      }
   }
-  
   getkey(apartment)
   
   /**
