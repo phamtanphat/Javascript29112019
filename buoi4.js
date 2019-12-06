@@ -1,0 +1,8 @@
+var number = 5 //(number)
+var name = "Nguyen Van Teo" //(string)
+var array = [1,2,3,4,5,6,7,8,9,10]//(object)
+var teo = {name : 'Teo', age : 10} //(object)
+var specialundifined = undefined //(undefined)
+var specialNull = null //(object)
+var specailFunction = console.log   //(function)
+console.log(typeof specailFunction)
