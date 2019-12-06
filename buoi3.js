@@ -95,12 +95,43 @@
 // }
 
 // 11 : Vong lap
-var arrayNames = ['Teo','Ti','Tun','Hoa','Tuan']
-for (var i = 0 ; i < arrayNames.length ;i++){
-    if(arrayNames[i] === 'Teo' ){
-       continue
-    }
-    console.log(arrayNames[i])
+// var arrayNames = ['Teo','Ti','Tun','Hoa','Tuan']
+// for (var i = 0 ; i < arrayNames.length ;i++){
+//     if(arrayNames[i] === 'Teo' ){
+//        continue
+//     }
+//     console.log(arrayNames[i])
+// }
+// for in , for of
+// for (var value of arrayNames ){
+//     console.log(value)
+// }
+/**
+ * Sử dụng vòng lặp for...of để tính tích của các phần tử trong một array gồm các số
+ */
+
+// function multiply(arr) {
+//     var ketqua = 1
+//     for(var value of arr){
+//         ketqua *= value 
+//     }
+//     return ketqua
+// }
+
+// console.log(multiply([2, 3, 4])); // expect: 24
+
+// var arrayNames = ['Teo','Ti','Tun','Hoa','Tuan']
+
+// for (var key in arrayNames){
+//     console.log(key)
+// }
+const teo = {
+    name : "Nguyen Van Teo",
+    age : 10,
+    address : "Quan 10"
+}
+for (var key in teo){
+    console.log(key)
 }
 
 
