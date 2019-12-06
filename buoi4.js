@@ -7,7 +7,7 @@
 // var specailFunction = console.log   //(function)
 // console.log(typeof specailFunction)
 // 13 – Array method
-const numbers = [1,2,3,4,5]
+// const numbers = [1,2,3,4,5]
 // Them phan tu vao vi tri cuoi cung
 // numbers.push(6,7,8)
 // Xoa phan tu vi tri cuoi cung
@@ -15,5 +15,10 @@ const numbers = [1,2,3,4,5]
 // Them phan tu o vi tri dau tien
 // numbers.unshift(-1,0)
 // Xoa phan tu o vi tri dau tien
-numbers.shift()
+// numbers.shift()
+// Xoa phan tu giua mang
+const numbers = [1,2,3,4,5]
+// numbers.splice(2,2)
+// Them phan tu giua mang
+numbers.splice(2,0,7,8,9,10)
 console.log(numbers)
