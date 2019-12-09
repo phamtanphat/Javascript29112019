@@ -50,11 +50,15 @@
  * sau đó gọi callback function với tham số là kết quả tổng vừa tính
  */
 function double(num) {
-    
+    return num * num
 }
 
 function sumAndDo(nums, callback) {
-
+    var sum = 0
+    for (var value of nums){
+        sum += value
+    }
+    console.log(callback(sum))
 }
 
 sumAndDo([1, 2, 3], double);
