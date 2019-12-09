@@ -75,21 +75,33 @@
 //     return total + currentValue
 // },0)
 // console.log(sum)
-const arrayUsers =  [
-    {id : 1 , name : 'Teo' ,age : 5},
-    {id : 2, name : 'Ti' ,age : 3},
-    {id : 3 , name : 'Hoa' ,age : 6},
-    {id : 4 , name : 'Toan' ,age : 7},
-    {id : 5 , name : 'Phong' ,age : 10},
-]
+// const arrayUsers =  [
+//     {id : 1 , name : 'Teo' ,age : 5},
+//     {id : 2, name : 'Ti' ,age : 3},
+//     {id : 3 , name : 'Hoa' ,age : 6},
+//     {id : 4 , name : 'Toan' ,age : 7},
+//     {id : 5 , name : 'Phong' ,age : 10},
+// ]
 // const sumAge = arrayUsers.reduce(function(totalAge , currentAge){
 //     return totalAge + currentAge.age
 // },0)
 
-const sumAge = arrayUsers.map(function(user){
-    return user.age
-}).reduce(function(total , currentAge){
-    return total + currentAge
-})
+// const sumAge = arrayUsers.map(function(user){
+//     return user.age
+// }).reduce(function(total , currentAge){
+//     return total + currentAge
+// })
 
-console.log(sumAge)
+// console.log(sumAge)
+
+function countOccurrences(arr) {
+    return arr.reduce(function(total , current){
+        if(current in total){
+            total[current]++
+        }else{
+            total[current] = 1
+        }
+        return total
+    },{})
+}
+console.log(countOccurrences(["a", "b", "c", "b", "a", "a"]));
