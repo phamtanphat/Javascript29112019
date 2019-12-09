@@ -91,17 +91,30 @@
 // }).reduce(function(total , currentAge){
 //     return total + currentAge
 // })
-
 // console.log(sumAge)
 
-function countOccurrences(arr) {
-    return arr.reduce(function(total , current){
-        if(current in total){
-            total[current]++
-        }else{
-            total[current] = 1
-        }
-        return total
-    },{})
-}
-console.log(countOccurrences(["a", "b", "c", "b", "a", "a"]));
+// function countOccurrences(arr) {
+//     return arr.reduce(function(total , current){
+//         if(current in total){
+//             total[current]++
+//         }else{
+//             total[current] = 1
+//         }
+//         return total
+//     },{})
+// }
+// console.log(countOccurrences(["a", "b", "c", "b", "a", "a"]));
+
+// Ham sort
+const numbers = [1,2,3,4,5,6,7,8,9,10]
+
+// a - b > 0 , thi a dung truoc va b dung sau
+const newNumbers = numbers.sort(function(a , b){
+    return a - b
+});
+
+console.log(newNumbers)
+
+
+
+
