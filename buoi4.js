@@ -52,7 +52,6 @@
 function double(num) {
     return num * num
 }
-
 function sumAndDo(nums, callback) {
     var sum = 0
     for (var value of nums){
@@ -60,7 +59,6 @@ function sumAndDo(nums, callback) {
     }
     console.log(callback(sum))
 }
-
 sumAndDo([1, 2, 3], double);
 
 
