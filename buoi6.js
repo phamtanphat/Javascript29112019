@@ -99,6 +99,16 @@
 // a = 10
 // console.log(a)
 
+//function context va Bind
+var mouse = {
+    name : 'Mickey',
+    sayhi : function() {
+      console.log('Hi, my name is' , this.name)
+    }
+  }
+  
+var say = mouse.sayhi.bind({name : 'Teo'})
+say()
 
 
 
