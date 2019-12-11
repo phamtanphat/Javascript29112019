@@ -24,21 +24,65 @@
 // console.log(Object.keys(teo).length)
 
 //Prototype :
-function Person(name , age){
-    this.name = name
-    this.age = age
-    this.showName = function(){
-        console.log(this.name)
-    }
-}
-Person.prototype.showAge = function(){
-    console.log(this.age)
-}
+// function Person(name , age){
+//     this.name = name
+//     this.age = age
+//     this.showName = function(){
+//         console.log(this.name)
+//     }
+// }
+// Person.prototype.showAge = function(){
+//     console.log(this.age)
+// }
+// const teo = new Person("Nguyen Van Teo",5)
+// const ti = new Person("Nguyen Van Teo",5)
+// // teo.showAge()
+// // ti.showAge()
+// console.log(teo.showAge == ti.showAge)
 
-const teo = new Person("Nguyen Van Teo",5)
-const ti = new Person("Nguyen Van Teo",5)
-// teo.showAge()
-// ti.showAge()
+// Toan tu 3 ngoi
+// var a = 5
+// var b = 10
+// console.log(a > b ? "A lon hon B" : "A nho hon B")
 
-console.log(teo.showAge == ti.showAge)
+// Functional scope
+//block scope : {}
+// var a = 5;
+// function show(){
+//     var a = 2
+//     console.log(a)
+// }
+// show()
+// console.log(a)
+// var a = 1;
+
+// function foo() {
+//   var a = 2;
+//   return a;
+// }
+
+// function bar() {
+//   a = 2;
+//   return a;
+// }
+
+// foo();
+// console.log(a); // Kết quả?
+// bar();
+// console.log(a); // Kết quả?
+var a = 1;
+
+var b = {
+  a: 2,
+  foo: function() {
+    console.log(this.a);
+  }
+};
+
+b.foo();
+
+var fooCopy = b.foo;
+fooCopy()
+
+
 
