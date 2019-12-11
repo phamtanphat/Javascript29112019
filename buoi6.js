@@ -16,10 +16,29 @@
 // console.log(Math.sqrt(a))
 
 //Handle Object
-const teo = {
-    name : 'Nguyen Van Teo',
-    age : 5
+// const teo = {
+//     name : 'Nguyen Van Teo',
+//     age : 5
+// }
+
+// console.log(Object.keys(teo).length)
+
+//Prototype :
+function Person(name , age){
+    this.name = name
+    this.age = age
+    this.showName = function(){
+        console.log(this.name)
+    }
+}
+Person.prototype.showAge = function(){
+    console.log(this.age)
 }
 
-console.log(Object.keys(teo).length)
+const teo = new Person("Nguyen Van Teo",5)
+const ti = new Person("Nguyen Van Teo",5)
+// teo.showAge()
+// ti.showAge()
+
+console.log(teo.showAge == ti.showAge)
 
