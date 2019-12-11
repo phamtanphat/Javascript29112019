@@ -70,19 +70,47 @@
 // console.log(a); // Kết quả?
 // bar();
 // console.log(a); // Kết quả?
-var a = 1;
+// var a = 1;
 
-var b = {
-  a: 2,
-  foo: function() {
-    console.log(this.a);
-  }
-};
+// var b = {
+//   a: 2,
+//   foo: function() {
+//     console.log(a);
+//   }
+// };
 
-b.foo();
+// b.foo();
 
-var fooCopy = b.foo;
-fooCopy()
+// var fooCopy = b.foo;
+// fooCopy()
+
+// hoisting
+// console.log(a)
+// var a 
+
+// khi dung a .No se lap tu khoi tao ra a cho viec su dung
+// function show(){
+//     console.log(a)
+//     var a = 5
+// }
+// su dung let , const : tranh tinh trang redecle
+// hoisting : let , const tranh tinh trang nay
+// const a = 5
+// a = 10
+// console.log(a)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
