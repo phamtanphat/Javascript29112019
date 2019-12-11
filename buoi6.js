@@ -100,15 +100,29 @@
 // console.log(a)
 
 //function context va Bind
-var mouse = {
+// var mouse = {
+//     name : 'Mickey',
+//     sayhi : function() {
+//       console.log('Hi, my name is' , this.name)
+//     }
+//   }
+  
+// var say = mouse.sayhi.bind({name : 'Teo'})
+// say()
+
+function run(cb){
+    console.log('run...')
+    cb()
+  }
+  
+  const mouse = {
     name : 'Mickey',
-    sayhi : function() {
-      console.log('Hi, my name is' , this.name)
+    run : function() {
+        console.log(this.name + ' is running')
     }
   }
   
-var say = mouse.sayhi.bind({name : 'Teo'})
-say()
+  run(mouse.run)
 
 
 
