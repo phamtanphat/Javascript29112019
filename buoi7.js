@@ -45,14 +45,29 @@
 //   }
 // greeting.call(null , 'Tom' , 10)
 
-function sum(){
-    const numbers = Array.from(arguments)
-    return numbers.reduce((sum , num )=> sum + num , 0)
-  }
-function average(){
-const x = sum.apply(null,arguments)
-return x / arguments.length
+// function sum(){
+//     const numbers = Array.from(arguments)
+//     return numbers.reduce((sum , num )=> sum + num , 0)
+//   }
+// function average(){
+// const x = sum.apply(null,arguments)
+// return x / arguments.length
+// }
+// average(1,2,3,6)
+
+// function showObjectName(name){
+//     const item = {name : name};
+//     console.log(item)
+// }
+// showObjectName("phat")
+
+// class
+class Person {
+   constructor(name , age){
+       this.name = name;
+       this.age = age
+   } 
 }
-average(1,2,3,6)
+
   
   
