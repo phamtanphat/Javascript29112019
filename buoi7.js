@@ -99,5 +99,30 @@
 // const chimse = new Bird("Chim se", true)
 // console.log(chimse)
 
+// rest
+// function sum(...nums){
+//     return nums.reduce((a ,b) => a + b)
+// }
+// sum(1,2,3,4,5)
+// spread
+// const a = [1,2,3]
+
+// function sum(...numbers){
+//     console.log(numbers.join())
+// }
+// sum(...a)
+// const obj1 = {
+//     a : 1,
+//     b : 2,
+//     c : 3,
+//     d : {e : 10}
+// }
+// let obj2 = {...obj1}
+
+
+
+  
+
+
   
   
