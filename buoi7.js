@@ -119,6 +119,21 @@
 // }
 // let obj2 = {...obj1}
 
+//destructuring
+// const arr = [10,20,30,40,50]
+// const [a,b,c,d,e] = arr
+
+const teo = {
+    name :"Nguyen Van Teo",
+    age : 10,
+    sayhi : function(){
+        console.log(`${this.name} say hi`)
+    }
+}
+const{name , age, sayhi} = teo
+sayhi()
+
+
 
 
   
