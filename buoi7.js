@@ -62,12 +62,42 @@
 // showObjectName("phat")
 
 // class
-class Person {
-   constructor(name , age){
-       this.name = name;
-       this.age = age
-   } 
-}
+// class Person {
+//    constructor(name , age){
+//        this.name = name;
+//        this.age = age
+//    } 
+//    work(){
+//        console.log(`${this.name} is working it `)
+//    }
+// }
+// const teo = new Person("Teo",25)
+// teo.work()
+
+// class Animal{
+//     constructor(name){
+//       this.name = name
+//     }
+//     eat(){
+//       console.log('Eating...')
+//     }
+//   }
+//   class Bird extends Animal{
+//     constructor(name , isFly){
+//         super(name)
+//         this.isFly = isFly
+//     }
+//     fly(){
+//         if(this.isFly){
+//             console.log('Flying...')
+//         }else{
+//             console.log("Not Flying")
+//         }    
+//     }
+//   }
+// const conmeo = new Animal("Meo")
+// const chimse = new Bird("Chim se", true)
+// console.log(chimse)
 
   
   
