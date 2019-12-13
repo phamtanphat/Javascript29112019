@@ -29,7 +29,30 @@
   
 //   console.log(Array.from(a))
 
-function showName(){
-    console.log(typeof arguments)
+// function showName(){
+//     console.log(typeof arguments)
+// }
+// showName("Teo","Ti","Tun")
+
+//default parameter
+// function tinhTong(a , b = 0){
+//     console.log(a + b)
+// }
+// tinhTong(5)
+
+// function greeting(name,age){
+//     console.log(`Hi! ${name} . I am ${age}`)
+//   }
+// greeting.call(null , 'Tom' , 10)
+
+function sum(){
+    const numbers = Array.from(arguments)
+    return numbers.reduce((sum , num )=> sum + num , 0)
+  }
+function average(){
+const x = sum.apply(null,arguments)
+return x / arguments.length
 }
-showName("Teo","Ti","Tun")
+average(1,2,3,6)
+  
+  
