@@ -21,14 +21,18 @@ const URL = 'http://api.openweathermap.org/data/2.5/weather?appid=86183a23377ed0
 //     return console.log(body.main.temp);
 // });
 
+// Hanoi => 25
+// 12345 => City not found
+// sai link => Error url
 
-function countotal(a , b){
-    if(!a) throw new Error("A khong du lieu")
-    if(!b) throw new Error("B khong du lieu")
-    return a + b;
-}
-try {
-    countotal(false,5)
-} catch (error) {
-    console.log(error)
-}
+// showCity("Hanoi")
+// function countotal(a , b){
+//     if(!a) throw new Error("A khong du lieu")
+//     if(!b) throw new Error("B khong du lieu")
+//     return a + b;
+// }
+// try {
+//     countotal(false,5)
+// } catch (error) {
+//     console.error(error)
+// }
