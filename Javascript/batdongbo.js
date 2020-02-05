@@ -14,12 +14,6 @@
 // Connection api
 var request = require('request');
 
-const URL = 'http://api.openweathermap.org/data/2.5/weather?appid=86183a23377ed034aef7aad102f43d64&units=metric&q=Hanoi';
-
-// request(URL,{json : true},function(error , response , body ){
-//     if(error) throw new Error("Loi")
-//     return console.log(body.main.temp);
-// });
 
 // Hanoi => 25
 // 12345 => City not found
@@ -36,3 +30,15 @@ const URL = 'http://api.openweathermap.org/data/2.5/weather?appid=86183a23377ed0
 // } catch (error) {
 //     console.error(error)
 // }
+
+function tempCity(city , callback){
+    const URL = `http://api.openweathermap.org/data/2.5/weather?appid=86183a23377ed034aef7aad102f43d64&units=metric&q=${city}`;
+    request(URL,{json : true},function(error , response , body ){
+        if(error) return callback(JSON.stringify(error))
+        if(body.message) return callback(JSON.stringify(body.message))
+        return callback( null ,body.main.temp);
+    });
+}
+tempCity('Hanoi', (error , temp) => {
+    console.log(error || temp)
+})
