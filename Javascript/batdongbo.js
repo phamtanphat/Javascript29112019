@@ -31,14 +31,28 @@ var request = require('request');
 //     console.error(error)
 // }
 
-function tempCity(city , callback){
-    const URL = `http://api.openweathermap.org/data/2.5/weather?appid=86183a23377ed034aef7aad102f43d64&units=metric&q=${city}`;
+// function tempCity(city , callback){
+//     const URL = `http://api.openweathermap.org/data/2.5/weather?appid=86183a23377ed034aef7aad102f43d64&units=metric&q=${city}`;
+//     request(URL,{json : true},function(error , response , body ){
+//         if(error) return callback(JSON.stringify(error))
+//         if(body.message) return callback(JSON.stringify(body.message))
+//         return callback( null ,body.main.temp);
+//     });
+// }
+// tempCity('Hanoi', (error , temp) => {
+//     console.log(error || temp)
+// })
+
+
+
+function cong(a , b , callback){
+    const URL = `https://pheptinhonline.herokuapp.com/cong/${a}/${b}`;
     request(URL,{json : true},function(error , response , body ){
         if(error) return callback(JSON.stringify(error))
-        if(body.message) return callback(JSON.stringify(body.message))
-        return callback( null ,body.main.temp);
+        if(body.success) return callback(JSON.stringify(body.message))
+        return callback( null ,body.message);
     });
 }
-tempCity('Hanoi', (error , temp) => {
-    console.log(error || temp)
+cong(10 , 5 , (error , tong) => {
+    console.log(error || tong)
 })
