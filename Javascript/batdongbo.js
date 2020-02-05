@@ -53,6 +53,30 @@ function cong(a , b , callback){
         return callback( null ,body.message);
     });
 }
-cong(10 , 5 , (error , tong) => {
+function tru(a , b , callback){
+    const URL = `https://pheptinhonline.herokuapp.com/tru/${a}/${b}`;
+    request(URL,{json : true},function(error , response , body ){
+        if(error) return callback(JSON.stringify(error))
+        if(body.success) return callback(JSON.stringify(body.message))
+        return callback( null ,body.message);
+    });
+}
+function nhan(a , b , callback){
+    const URL = `https://pheptinhonline.herokuapp.com/nhan/${a}/${b}`;
+    request(URL,{json : true},function(error , response , body ){
+        if(error) return callback(JSON.stringify(error))
+        if(body.success) return callback(JSON.stringify(body.message))
+        return callback( null ,body.message);
+    });
+}
+function chia(a , b , callback){
+    const URL = `https://pheptinhonline.herokuapp.com/chia/${a}/${b}`;
+    request(URL,{json : true},function(error , response , body ){
+        if(error) return callback(JSON.stringify(error))
+        if(body.success) return callback(JSON.stringify(body.message))
+        return callback( null ,body.message);
+    });
+}
+chia(10 , 5 , (error , tong) => {
     console.log(error || tong)
 })
