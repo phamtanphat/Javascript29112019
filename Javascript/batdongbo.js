@@ -45,38 +45,38 @@ var request = require('request');
 
 
 
-function cong(a , b , callback){
-    const URL = `https://pheptinhonline.herokuapp.com/cong/${a}/${b}`;
-    request(URL,{json : true},function(error , response , body ){
-        if(error) return callback(JSON.stringify(error))
-        if(!body.success) return callback(JSON.stringify(body.message))
-        return callback( null ,body.message);
-    });
-}
-function tru(a , b , callback){
-    const URL = `https://pheptinhonline.herokuapp.com/tru/${a}/${b}`;
-    request(URL,{json : true},function(error , response , body ){
-        if(error) return callback(JSON.stringify(error))
-        if(!body.success) return callback(JSON.stringify(body.message))
-        return callback( null ,body.message);
-    });
-}
-function nhan(a , b , callback){
-    const URL = `https://pheptinhonline.herokuapp.com/nhan/${a}/${b}`;
-    request(URL,{json : true},function(error , response , body ){
-        if(error) return callback(JSON.stringify(error))
-        if(!body.success) return callback(JSON.stringify(body.message))
-        return callback( null ,body.message);
-    });
-}
-function chia(a , b , callback){
-    const URL = `https://pheptinhonline.herokuapp.com/chia/${a}/${b}`;
-    request(URL,{json : true},function(error , response , body ){
-        if(error) return callback(JSON.stringify(error))
-        if(!body.success) return callback(JSON.stringify(body.message))
-        return callback( null ,body.message);
-    });
-}
+// function cong(a , b , callback){
+//     const URL = `https://pheptinhonline.herokuapp.com/cong/${a}/${b}`;
+//     request(URL,{json : true},function(error , response , body ){
+//         if(error) return callback(JSON.stringify(error))
+//         if(!body.success) return callback(JSON.stringify(body.message))
+//         return callback( null ,body.message);
+//     });
+// }
+// function tru(a , b , callback){
+//     const URL = `https://pheptinhonline.herokuapp.com/tru/${a}/${b}`;
+//     request(URL,{json : true},function(error , response , body ){
+//         if(error) return callback(JSON.stringify(error))
+//         if(!body.success) return callback(JSON.stringify(body.message))
+//         return callback( null ,body.message);
+//     });
+// }
+// function nhan(a , b , callback){
+//     const URL = `https://pheptinhonline.herokuapp.com/nhan/${a}/${b}`;
+//     request(URL,{json : true},function(error , response , body ){
+//         if(error) return callback(JSON.stringify(error))
+//         if(!body.success) return callback(JSON.stringify(body.message))
+//         return callback( null ,body.message);
+//     });
+// }
+// function chia(a , b , callback){
+//     const URL = `https://pheptinhonline.herokuapp.com/chia/${a}/${b}`;
+//     request(URL,{json : true},function(error , response , body ){
+//         if(error) return callback(JSON.stringify(error))
+//         if(!body.success) return callback(JSON.stringify(body.message))
+//         return callback( null ,body.message);
+//     });
+// }
 // chia(10 , 5 , (error , tong) => {
 //     console.log(error || tong)
 // })
@@ -87,19 +87,35 @@ function chia(a , b , callback){
 //     })
 // }
 // Chu vi hinh chu nhat : P = (A + b ) * 2
-function chuvi(a , b , callback){
-    cong(a , b , (error , tong) => {
-        if(error) return callback(error)
-        nhan(tong , 2 , (error , tich)=>{
-            callback(error , tich)
-        })
-    })
+// function chuvi(a , b , callback){
+//     cong(a , b , (error , tong) => {
+//         if(error) return callback(error)
+//         nhan(tong , 2 , (error , tich)=>{
+//             callback(error , tich)
+//         })
+//     })
     
-}
+// }
 
-chuvi(15 , 5 , (error , value) => {
-    console.log(error || value)
-})
+// chuvi(15 , 5 , (error , value) => {
+//     console.log(error || value)
+// })
 // dientich(5, 10 , (error, value) => {
 //     console.log(error || value)
 // })
+
+// Promise : es5
+
+function cong(a , b ){
+    return new Promise((res, rej)=>{
+        const URL = `https://pheptinhonline.herokuapp.com/cong/${a}/${b}`;
+        request(URL,{json : true},function(error , response , body ){
+            if(error) return rej(JSON.stringify(error))
+            if(!body.success) return rej(JSON.stringify(body.message))
+            return res(body.message);
+        });
+    })
+}
+cong(10 , 5)
+.then(value => console.log(value))
+.catch(error => console.log(error))
