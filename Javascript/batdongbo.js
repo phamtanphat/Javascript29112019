@@ -116,6 +116,25 @@ function cong(a , b ){
         });
     })
 }
-cong(10 , 5)
+function nhan(a , b ){
+    return new Promise((res, rej)=>{
+        const URL = `https://pheptinhonline.herokuapp.com/nhan/${a}/${b}`;
+        request(URL,{json : true},function(error , response , body ){
+            if(error) return rej(JSON.stringify(error))
+            if(!body.success) return rej(JSON.stringify(body.message))
+            return res(body.message);
+        });
+    })
+}
+
+function dientich(a , b){
+    return new Promise((res , rej)=>{
+        cong(a , b)
+        .then(tong =>  nhan(tong , 2))
+        .then(value => res(value))
+        .catch(error => rej(error))
+    })
+}
+dientich(5 ,"a")
 .then(value => console.log(value))
 .catch(error => console.log(error))
